@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Future Ready AI</title>
+  <meta name="description" content="Get in touch with Future Ready AI about curriculum, professional development, school partnerships, or speaking engagements." />
+  <meta property="og:title" content="Contact Future Ready AI" />
+  <meta property="og:description" content="Reach out about curriculum, professional development, or school partnerships." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="announcement-bar">
+    <strong>Future Ready AI</strong> — Preparing learners and educators for an AI-powered future.
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav-brand" href="index.html">
+        <span class="nav-brand__mark" aria-hidden="true">FR</span>
+        <span class="nav-brand__text">
+          <span class="nav-brand__name">Future Ready AI</span>
+          <span class="nav-brand__tagline">Learn. Create. Lead.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="primary-navigation" data-nav-links data-open="false">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="schools.html">For Schools</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a class="btn btn--primary btn--sm" href="#inquiry-form">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-header">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+        <p class="eyebrow">Contact</p>
+        <h1>Let's talk about AI literacy at your school</h1>
+        <p>Whether you're exploring curriculum, planning professional development, or considering a district partnership, we'd love to hear from you.</p>
+      </div>
+    </div>
+
+    <section class="section" id="inquiry-form">
+      <div class="container container--narrow">
+        <form class="form" data-demo-form novalidate>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="c-name">Name</label>
+              <input type="text" id="c-name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="c-org">Organization</label>
+              <input type="text" id="c-org" name="organization" autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="c-role">Role</label>
+              <input type="text" id="c-role" name="role" placeholder="e.g. Teacher, Principal, Curriculum Director" />
+            </div>
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-phone">Phone <span class="hint">(optional)</span></label>
+            <input type="tel" id="c-phone" name="phone" autocomplete="tel" />
+          </div>
+
+          <div class="field">
+            <label for="c-inquiry-type">Type of Inquiry</label>
+            <select id="c-inquiry-type" name="inquiry_type" required>
+              <option value="">Select one</option>
+              <option value="curriculum">Curriculum information</option>
+              <option value="pd">Teacher professional development</option>
+              <option value="partnership">School or district partnership</option>
+              <option value="community">Community workshop</option>
+              <option value="speaking">Speaking engagement</option>
+              <option value="custom">Custom program</option>
+              <option value="general">General inquiry</option>
+            </select>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="c-grades">Grade Levels Served</label>
+              <input type="text" id="c-grades" name="grades" placeholder="e.g. K-5, 6-8, 9-12" />
+            </div>
+            <div class="field">
+              <label for="c-size">Approx. Number of Learners or Educators</label>
+              <input type="text" id="c-size" name="size" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="field-checkbox">
+            <input type="checkbox" id="c-consent" name="consent" required />
+            <label for="c-consent" style="font-weight: 500;">I consent to being contacted by Future Ready AI regarding my inquiry.</label>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">Send Message</button>
+
+          <div class="form-message" role="status">Thanks for reaching out. This form isn't connected to a backend yet — replies will begin once a form service is in place. <em>[CONNECT FORM SERVICE]</em></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container container--narrow text-center">
+        <p class="eyebrow">Other Ways to Reach Us</p>
+        <p>The fastest way to reach us is the form above. We're based in Chicago, Illinois.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand__name">Future Ready AI</div>
+          <div class="footer-brand__tagline">Learn. Create. Lead.</div>
+          <p style="color: var(--color-text-on-dark-muted); font-size: var(--fs-small);">Age-appropriate AI literacy and responsible technology education for K-12 schools and communities.</p>
+        </div>
+        <div>
+          <h5 class="footer-heading">Explore</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="educators.html">For Educators</a></li>
+            <li><a href="schools.html">For Schools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Connect</h5>
+          <ul class="footer-links">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Schedule a Conversation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Contact</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li>Chicago, Illinois</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span data-current-year></span> Future Ready AI. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="accessibility.html">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
