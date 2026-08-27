@@ -1,0 +1,89 @@
+Future Ready AI - Button Visibility QA
+
+Sitewide CSS now locks readable text for primary, secondary, outline, and selected filter-button states.
+Interactive labels checked: 83
+Blank button labels found: 0
+
+about.html | btn btn--primary btn--sm | Explore the Curriculum
+about.html | btn btn--outline | Explore Our Mission
+about.html | btn btn--outline mt-lg | Learn More About the Curriculum
+about.html | btn btn--primary | Schedule a Conversation
+about.html | btn btn--secondary | Explore the Curriculum
+accessibility.html | btn btn--primary btn--sm | Explore the Curriculum
+contact.html | btn btn--primary btn--sm | Get in Touch
+contact.html | btn btn--primary btn--block | Send Message
+curriculum.html | btn btn--primary btn--sm | Explore the Curriculum
+curriculum.html | btn btn--outline | View the Grade Bands
+curriculum.html | btn btn--primary | Request a Sample Lesson
+curriculum.html | btn btn--outline btn--sm | Preview the AI Discoverers workbook
+curriculum.html | btn btn--outline btn--sm | Preview the AI Explorers workbook
+curriculum.html | btn btn--outline btn--sm | Preview the AI Innovators workbook
+curriculum.html | btn btn--outline | View Lesson Details
+curriculum.html | btn btn--primary | Download Complete Bundle
+curriculum.html | btn btn--primary btn--block | Request a Sample Lesson
+educators.html | btn btn--primary btn--sm | Request PD
+educators.html | btn btn--outline | Explore Educator Support
+educators.html | btn btn--primary | Request Professional Development
+educators.html | btn btn--primary btn--block | Submit Inquiry
+high-school-ai.html | btn btn--primary btn--sm | Explore the Curriculum
+high-school-ai.html | btn btn--primary | Explore the Flagship Lesson
+high-school-ai.html | btn btn--secondary | Discuss School or District Support
+high-school-ai.html | btn btn--primary | View Student Workbook Preview
+high-school-ai.html | btn btn--outline | View Student Workbook Preview
+high-school-ai.html | btn btn--primary | View Student Workbook Preview
+high-school-ai.html | btn btn--outline | Discuss Customization
+high-school-ai.html | btn btn--primary | View the Full Lesson Details
+index.html | btn btn--primary btn--sm | Explore the Curriculum
+index.html | btn btn--primary | Explore the K–12 Pathway
+index.html | btn btn--outline | View a Classroom-Ready Lesson
+index.html | btn btn--primary | Meet the Founder
+index.html | btn btn--outline | Explore the Curriculum
+index.html | btn btn--outline | Explore the Six Curriculum Pillars
+index.html | btn btn--primary | View the Grade-Band Pathways
+index.html | btn btn--primary | Explore All Curriculum Previews
+index.html | btn btn--outline | Explore School & District Support
+index.html | btn btn--primary | Schedule a Conversation
+index.html | btn btn--outline | Request Program Information
+pattern-detectives.html | btn btn--primary btn--sm | Explore the Curriculum
+pattern-detectives.html | btn btn--primary | Download Complete Bundle
+pattern-detectives.html | btn btn--outline | Open Combined Lesson PDF
+pattern-detectives.html | btn btn--primary btn--sm | Download ZIP
+pattern-detectives.html | btn btn--primary | Return to the Curriculum
+pattern-detectives.html | btn btn--secondary | Request Another Sample
+privacy.html | btn btn--primary btn--sm | Explore the Curriculum
+resources.html | btn btn--primary btn--sm | Explore the Curriculum
+resources.html | btn btn--primary | Download the Guide
+resources.html | btn btn--primary | View Lesson and Downloads
+resources.html | btn btn--outline | Explore the Curriculum
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--outline btn--sm | Open Preview PDF
+resources.html | btn btn--primary | Preview the Flagship Lesson
+resources.html | btn btn--outline | Discuss Implementation
+resources.html | filter-chip | All Resources
+resources.html | filter-chip | Student Activities
+resources.html | filter-chip | Teacher Guides
+resources.html | filter-chip | Family Resources
+resources.html | filter-chip | School Leadership
+resources.html | filter-chip | Responsible AI
+resources.html | filter-chip | Digital Citizenship
+resources.html | filter-chip | AI Vocabulary
+resources.html | filter-chip | Research & Insights
+resources.html | filter-chip | Complete Lesson Packages
+resources.html | filter-chip | High School
+resources.html | filter-chip | Professional Learning
+resources.html | filter-chip | AI Readiness
+resources.html | btn btn--primary | Explore the Curriculum
+resources.html | btn btn--outline | Support for Educators
+resources.html | btn btn--outline | School Partnerships
+schools.html | btn btn--primary btn--sm | Request Consultation
+schools.html | btn btn--primary | Download the Assessment
+schools.html | btn btn--secondary | Complete the Online Assessment
+schools.html | btn btn--primary | View the Full Professional Learning Guide
+schools.html | btn btn--primary | View the Pilot Overview
+schools.html | btn btn--outline mt-lg | View Consultant Capabilities
+schools.html | btn btn--primary btn--block | Request a Consultation
+terms.html | btn btn--primary btn--sm | Explore the Curriculum
