@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=3" rel="stylesheet"/>
+<link href="styles.css?v=5" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -47,14 +47,16 @@
 </div>
 </header>
 <main id="main-content">
-<div class="page-header">
-<div class="container">
-<p class="breadcrumb"><a href="index.html">Home</a> / Resources</p>
-<p class="eyebrow">Resources</p>
-<h1>Public resources for responsible AI learning</h1>
-<p>Explore selected public-facing resources for school leaders, educators, students, and families. Full curriculum masters, teacher-only materials, answer keys, and implementation files remain protected.</p>
+<section aria-labelledby="resources-hero-title" class="approved-hero">
+<div class="approved-hero__wrap">
+<img alt="Resources You Can Use Right Away" class="approved-hero__image" fetchpriority="high" loading="eager" src="assets/images/approved-heroes/resources-approved-hero.png"/>
+<a aria-label="Browse Resources" class="approved-hero__hotspot" href="#curriculum-previews" style="left:4.8%;top:74.0%;width:13.0%;height:7.8%;"><span>Browse Resources</span></a><a aria-label="Download Samples" class="approved-hero__hotspot" href="#curriculum-previews" style="left:19.3%;top:74.0%;width:14.7%;height:7.8%;"><span>Download Samples</span></a>
 </div>
-</div><section class="section section--cream" style="padding-block:var(--space-lg)"><div class="container resource-policy"><p class="mb-0"><strong>Public-resource policy:</strong> This library intentionally separates shareable examples from protected curriculum and teacher-only implementation materials. Visitors can see the instructional approach without receiving answer keys or full curriculum masters.</p></div></section>
+<div class="sr-only approved-hero__seo-copy">
+<h1 id="resources-hero-title">Resources You Can Use Right Away</h1>
+<p>Explore selected public lessons, planning tools, guides, and implementation resources designed to make responsible AI literacy easier to understand and begin—while protected curriculum masters and teacher-only materials remain private.</p>
+</div>
+</section><section class="section section--cream" style="padding-block:var(--space-lg)"><div class="container resource-policy"><p class="mb-0"><strong>Public-resource policy:</strong> This library intentionally separates shareable examples from protected curriculum and teacher-only implementation materials. Visitors can see the instructional approach without receiving answer keys or full curriculum masters.</p></div></section>
 <!-- ================= FEATURED RESOURCES ================= -->
 <section class="section section--teal-tint">
 <div class="container">
@@ -190,8 +192,6 @@
 <button aria-pressed="false" class="filter-chip" data-filter-chip="family" type="button">Family Resources</button>
 <button aria-pressed="false" class="filter-chip" data-filter-chip="leadership" type="button">School Leadership</button>
 <button aria-pressed="false" class="filter-chip" data-filter-chip="responsible-ai" type="button">Responsible AI</button>
-
-
 <button aria-pressed="false" class="filter-chip" data-filter-chip="research" type="button">Research &amp; Insights</button>
 <button aria-pressed="false" class="filter-chip" data-filter-chip="lesson-package" type="button">Complete Lesson Packages</button>
 <button aria-pressed="false" class="filter-chip" data-filter-chip="high-school" type="button">High School</button>

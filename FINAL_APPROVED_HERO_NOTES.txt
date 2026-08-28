@@ -1,0 +1,8 @@
+Future Ready AI — FINAL APPROVED HERO BUILD
+
+This build uses the exact seven high-resolution hero images from the montage approved by the user.
+Only the duplicate image navigation was cropped off; the site keeps its real HTML navigation.
+The artwork, facial appearance, page-specific colors/backgrounds, puppets, robot, typography and visual details were not regenerated during packaging.
+
+Hero CTA buttons are made functional with transparent HTML link hotspots placed over the visible buttons.
+The hero width is capped at 1080px on desktop and scales responsively on smaller screens.
