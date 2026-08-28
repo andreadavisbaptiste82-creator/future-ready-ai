@@ -3205,3 +3205,10 @@ button.btn--outline:active {
   .approved-hero { padding-left: 8px; padding-right: 8px; }
   .approved-hero__wrap { width: 100%; }
 }
+
+
+/* FINAL PUPPET HERO LOCK — 2026-08-28
+   Artwork is displayed uncropped at the previously approved site width.
+   Transparent HTML hotspots make the baked-in CTA artwork functional. */
+.approved-hero__wrap { width: min(1080px, 100%); }
+.approved-hero__image { width: 100%; height: auto; object-fit: contain; }

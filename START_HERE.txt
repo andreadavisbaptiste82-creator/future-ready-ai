@@ -1,0 +1,9 @@
+FUTURE READY AI — SIMPLE LOCAL PREVIEW
+
+1. Unzip Future_Ready_AI_CLICK_TO_PREVIEW.zip
+2. Open the folder Future_Ready_AI_CLICK_TO_PREVIEW
+3. Double-click index.html
+4. Chrome will open the actual homepage.
+5. Use the real navigation to review Home, About, Curriculum, For Educators, For Schools, Resources, and Contact.
+
+The website files are already arranged exactly as they need to be for a local preview.
