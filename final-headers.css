@@ -1,44 +1,213 @@
-/* Future Ready AI — final locked header system
-   Uses ONE approved image on every hero to eliminate face drift. */
+/* Future Ready AI — integrated hero system
+   Uses the exact approved group image without regeneration or face changes.
+   Headlines and CTAs remain live HTML so the hero flows with the website. */
+
 :root{
-  --fra-navy:#0b2450;
-  --fra-teal:#0994a8;
-  --fra-gold:#d79b24;
-  --fra-coral:#f25d5d;
-  --fra-ink:#10233d;
-  --fra-muted:#55697a;
+  --fra-navy:#122142;
+  --fra-teal:#238C92;
+  --fra-gold:#F5A24B;
+  --fra-coral:#FF765F;
+  --fra-ink:#24324A;
+  --fra-muted:#536174;
 }
-.fra-hero{overflow:hidden;border-bottom:1px solid rgba(11,36,80,.08)}
-.fra-hero__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(440px,1.05fr);align-items:center;gap:26px;padding:42px 28px 28px}
-.fra-hero__copy{position:relative;z-index:2;max-width:670px}
-.fra-hero__eyebrow{margin:0 0 12px;font:700 .82rem/1.4 Poppins,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.fra-hero h1{margin:0;color:var(--fra-navy);font-family:Georgia,'Times New Roman',serif;font-size:clamp(3rem,5.1vw,5.35rem);line-height:.96;letter-spacing:-.04em}
-.fra-hero__sub{max-width:620px;margin:18px 0 0;color:var(--fra-ink);font-size:clamp(1rem,1.5vw,1.25rem);line-height:1.5}
-.fra-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.fra-hero__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:12px;text-decoration:none;font:700 .95rem/1 Poppins,Arial,sans-serif;border:2px solid currentColor}
-.fra-hero__btn--solid{color:#fff;background:var(--fra-accent);border-color:var(--fra-accent)}
-.fra-hero__btn--outline{color:var(--fra-accent);background:rgba(255,255,255,.76)}
-.fra-hero__micro{display:flex;flex-wrap:wrap;gap:18px;margin:28px 0 0;padding:20px 0 0;border-top:1px solid rgba(11,36,80,.12)}
-.fra-hero__micro span{display:inline-flex;gap:8px;align-items:center;color:var(--fra-navy);font-weight:700;font-size:.82rem}
-.fra-hero__micro span::before{content:'✦';color:var(--fra-accent)}
-.fra-hero__visual{position:relative;min-height:485px;display:flex;align-items:flex-end;justify-content:center}
-.fra-hero__visual img{display:block;width:100%;max-width:720px;height:auto;object-fit:contain;object-position:center bottom;filter:none!important;transform:none!important}
 
-.fra-theme-home{--fra-accent:var(--fra-teal);background:linear-gradient(90deg,#f8feff 0 42%,#e9f8fd 74%,#dff3fb 100%)}
-.fra-theme-curriculum{--fra-accent:var(--fra-gold);background:linear-gradient(90deg,#fffdf8 0 42%,#fff5d8 74%,#fce8ae 100%)}
-.fra-theme-educators{--fra-accent:var(--fra-coral);background:linear-gradient(90deg,#fffafa 0 42%,#fff0ec 74%,#ffdcd5 100%)}
-.fra-theme-schools{--fra-accent:#0a9b8f;background:linear-gradient(90deg,#fbfffd 0 42%,#e9f8f2 74%,#d8f1e5 100%)}
-.fra-theme-resources{--fra-accent:#168ca7;background:linear-gradient(90deg,#fbfdff 0 42%,#eef7ff 74%,#e1f0ff 100%)}
-.fra-theme-about{--fra-accent:#178e99;background:linear-gradient(90deg,#fffdf8 0 42%,#f4fbf8 74%,#e8f5f1 100%)}
-.fra-theme-contact{--fra-accent:#0b98ad;background:linear-gradient(90deg,#fffdf8 0 42%,#eef9fd 72%,#e2f3f8 100%)}
-.fra-theme-home .fra-hero__eyebrow,.fra-theme-resources .fra-hero__eyebrow,.fra-theme-about .fra-hero__eyebrow,.fra-theme-contact .fra-hero__eyebrow{color:#087f90}
-.fra-theme-curriculum .fra-hero__eyebrow{color:#aa7112}
-.fra-theme-educators .fra-hero__eyebrow{color:#d84848}
-.fra-theme-schools .fra-hero__eyebrow{color:#087f78}
+.fra-hero{
+  --fra-accent:var(--fra-teal);
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid rgba(18,33,66,.08);
+  isolation:isolate;
+}
+.fra-hero::before{
+  content:"";
+  position:absolute;
+  inset:auto -8% -42% auto;
+  width:min(520px,42vw);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--fra-accent) 10%,transparent);
+  filter:blur(1px);
+  z-index:-1;
+}
+.fra-hero__inner{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto;
+  min-height:560px;
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);
+  gap:clamp(28px,4vw,64px);
+  align-items:center;
+  padding:clamp(48px,6vw,82px) 0 clamp(38px,5vw,68px);
+}
+.fra-hero__copy{
+  position:relative;
+  z-index:2;
+  max-width:690px;
+}
+.fra-hero__eyebrow{
+  margin:0 0 14px;
+  font:700 .78rem/1.4 "Poppins",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  color:var(--fra-accent);
+}
+.fra-hero h1{
+  margin:0;
+  max-width:680px;
+  font-family:"Poppins",Arial,sans-serif;
+  font-size:clamp(2.8rem,5vw,5.15rem);
+  line-height:.99;
+  letter-spacing:-.045em;
+  color:var(--fra-navy);
+  font-weight:700;
+}
+.fra-hero__sub{
+  max-width:640px;
+  margin:20px 0 0;
+  color:var(--fra-ink);
+  font-size:clamp(1rem,1.25vw,1.18rem);
+  line-height:1.65;
+}
+.fra-hero__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+.fra-hero__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 21px;
+  border-radius:999px;
+  text-decoration:none!important;
+  font:700 .92rem/1 "Poppins",Arial,sans-serif;
+  border:2px solid var(--fra-accent);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+}
+.fra-hero__btn:hover{transform:translateY(-2px)}
+.fra-hero__btn--solid{
+  color:#fff!important;
+  background:var(--fra-accent);
+  box-shadow:0 10px 24px color-mix(in srgb,var(--fra-accent) 20%,transparent);
+}
+.fra-hero__btn--outline{
+  color:var(--fra-navy)!important;
+  background:rgba(255,255,255,.66);
+  border-color:color-mix(in srgb,var(--fra-navy) 28%,transparent);
+}
+.fra-hero__btn--outline:hover{
+  color:#fff!important;
+  background:var(--fra-navy);
+  border-color:var(--fra-navy);
+}
+.fra-hero__micro{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 18px;
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid rgba(18,33,66,.12);
+}
+.fra-hero__micro span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--fra-muted);
+  font-size:.8rem;
+  font-weight:700;
+}
+.fra-hero__micro span::before{
+  content:"•";
+  color:var(--fra-accent);
+  font-size:1.15rem;
+  line-height:1;
+}
 
-.fra-contact-shell{max-width:1180px;margin:42px auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr);gap:20px;align-items:start}
-.fra-contact-form{background:linear-gradient(155deg,#0b3152,#071f36);color:#fff;padding:28px;border-radius:18px;box-shadow:0 16px 42px rgba(5,31,52,.12)}
-.fra-contact-form h2,.fra-contact-card h2{margin:.2rem 0 .55rem;font-family:Georgia,'Times New Roman',serif}
+.fra-hero__visual{
+  position:relative;
+  min-height:450px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  align-self:stretch;
+}
+.fra-hero__visual img{
+  display:block;
+  width:min(100%,680px);
+  height:auto;
+  max-height:510px;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:none!important;
+  transform:none!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* Page-specific color fields: one system, distinct page identities. */
+.fra-theme-home{
+  --fra-accent:#238C92;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(255,255,255,.72),transparent 28%),
+    linear-gradient(115deg,#f9fcfd 0%,#eef8fb 54%,#dff1f8 100%);
+}
+.fra-theme-about{
+  --fra-accent:#238C92;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fffaf1 0%,#f7f4ea 52%,#e9f5f1 100%);
+}
+.fra-theme-curriculum{
+  --fra-accent:#C98A28;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fffdf7 0%,#fff7df 52%,#f8e6b8 100%);
+}
+.fra-theme-educators{
+  --fra-accent:#E55F53;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fffdfb 0%,#fff1ed 54%,#fbded8 100%);
+}
+.fra-theme-schools{
+  --fra-accent:#2F8B72;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fbfdf9 0%,#eef7ef 54%,#dceedd 100%);
+}
+.fra-theme-resources{
+  --fra-accent:#745AA6;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fcfbff 0%,#f3effb 54%,#e7e0f5 100%);
+}
+.fra-theme-contact{
+  --fra-accent:#238C92;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(255,255,255,.72),transparent 27%),
+    linear-gradient(115deg,#fffdf8 0%,#f8f3e8 54%,#e8f5f3 100%);
+}
+
+/* Contact-page enhancement used by final-headers.js. */
+.fra-contact-shell{
+  max-width:1180px;
+  margin:42px auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr);
+  gap:20px;
+  align-items:start;
+}
+.fra-contact-form{
+  background:linear-gradient(155deg,#0b3152,#071f36);
+  color:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 16px 42px rgba(5,31,52,.12);
+}
+.fra-contact-form h2,.fra-contact-card h2{margin:.2rem 0 .55rem}
 .fra-contact-form p{color:#cfdae0}
 .fra-contact-form .form{margin:0}
 .fra-contact-form .field label,.fra-contact-form .field-checkbox label{color:#fff}
@@ -56,70 +225,31 @@
 .fra-contact-name span{display:block;color:#657883;font-size:.82rem;margin-top:2px}
 
 @media(max-width:900px){
-  .fra-hero__inner{grid-template-columns:1fr;padding-top:34px}
-  .fra-hero__visual{min-height:0}
-  .fra-hero__visual img{max-width:760px}
+  .fra-hero__inner{
+    width:min(760px,calc(100% - 36px));
+    min-height:0;
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:42px 0 24px;
+  }
+  .fra-hero__copy{max-width:none}
+  .fra-hero h1{max-width:720px}
+  .fra-hero__visual{
+    min-height:0;
+    max-height:none;
+    align-items:flex-end;
+  }
+  .fra-hero__visual img{
+    width:min(100%,700px);
+    max-height:none;
+  }
   .fra-contact-shell{grid-template-columns:1fr}
 }
 @media(max-width:620px){
-  .fra-hero__inner{padding:30px 18px 20px}
-  .fra-hero h1{font-size:clamp(2.55rem,14vw,3.8rem)}
-  .fra-hero__micro{gap:10px}
-}
-
-
-/* ==========================================================
-   EXACT APPROVED IMAGE CROP FIX — 2026-09-26
-   The locked source image includes a narrow strip of homepage copy
-   on its far-left edge. Crop that strip in CSS only — no regeneration,
-   retouching, or face changes.
-   ========================================================== */
-.fra-hero__visual{
-  overflow:hidden!important;
-}
-.fra-hero__visual img{
-  width:112.1%!important;
-  max-width:none!important;
-  transform:translateX(-10.8%)!important;
-  transform-origin:left center!important;
-  object-fit:contain!important;
-  object-position:center bottom!important;
-  filter:none!important;
-}
-
-/* Keep the same exact image while allowing each page's approved
-   background/accent color to remain visible around the composition. */
-.fra-theme-home .fra-hero__visual{background:#e9f8fd}
-.fra-theme-curriculum .fra-hero__visual{background:#fff5d8}
-.fra-theme-educators .fra-hero__visual{background:#fff0ec}
-.fra-theme-schools .fra-hero__visual{background:#e9f8f2}
-.fra-theme-resources .fra-hero__visual{background:#eef7ff}
-.fra-theme-about .fra-hero__visual{background:#f4fbf8}
-.fra-theme-contact .fra-hero__visual{background:#eef9fd}
-
-
-/* FINAL LOCKED 7 HEADER IMAGES — 2026-09-27 */
-.approved-hero--locked7{
-  padding:0!important;
-  margin:0!important;
-  background:#fff!important;
-  overflow:hidden!important;
-}
-.approved-hero--locked7 .approved-hero__wrap{
-  position:relative!important;
-  width:min(1508px,100%)!important;
-  max-width:none!important;
-  margin:0 auto!important;
-}
-.approved-hero--locked7 .approved-hero__image{
-  display:block!important;
-  width:100%!important;
-  height:auto!important;
-  max-width:none!important;
-  object-fit:contain!important;
-  object-position:center top!important;
-}
-@media(max-width:760px){
-  .approved-hero--locked7{padding:0!important}
-  .approved-hero--locked7 .approved-hero__wrap{width:100%!important}
+  .fra-hero__inner{width:min(100% - 28px,720px);padding-top:34px}
+  .fra-hero h1{font-size:clamp(2.35rem,12vw,3.55rem)}
+  .fra-hero__sub{font-size:1rem}
+  .fra-hero__actions{flex-direction:column;align-items:stretch}
+  .fra-hero__btn{width:100%;box-sizing:border-box}
+  .fra-hero__micro{gap:8px 12px}
 }
