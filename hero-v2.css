@@ -1,0 +1,187 @@
+/* =========================================================
+   Future Ready AI — Header v2 (approved mockups, 2026-09-27)
+   Desktop: the approved header image (painted nav removed) with
+   clickable areas over its painted buttons.
+   Phones (≤760px): live text + buttons, illustration below.
+   ========================================================= */
+
+/* Page accent colors (darkened slightly from the mockups so white
+   button text passes WCAG AA contrast) */
+.theme-home       { --accent: #0e7c89; --accent-hover: #0a6571; }
+.theme-about      { --accent: #6d4bb8; --accent-hover: #583b99; }
+.theme-curriculum { --accent: #2f7a50; --accent-hover: #246240; }
+.theme-educators  { --accent: #c4452b; --accent-hover: #a63822; }
+.theme-schools    { --accent: #0e7b70; --accent-hover: #0a655c; }
+.theme-resources  { --accent: #9c6410; --accent-hover: #83530c; }
+.theme-contact    { --accent: #2f7a50; --accent-hover: #246240; }
+
+/* ---------- Navigation: match the mockup nav ---------- */
+/* backdrop-filter trapped the phone menu inside the 90px header
+   bar, so only "Home" showed when the menu opened */
+[class*="theme-"] .site-header { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+[class*="theme-"] .nav-links a:not(.btn) { color: #1d2f6f; font-weight: 500; }
+[class*="theme-"] .nav-links a:not(.btn):hover,
+[class*="theme-"] .nav-links a[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+[class*="theme-"] .nav-links a[aria-current="page"] { border-bottom-width: 3px; }
+[class*="theme-"] .site-header .nav-links .btn--primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 999px;
+  padding: .65rem 1.25rem;
+  white-space: nowrap;
+}
+[class*="theme-"] .site-header .nav-links .btn--primary:hover,
+[class*="theme-"] .site-header .nav-links .btn--primary:focus-visible {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+/* ---------- Hero ---------- */
+.hero-v2 { position: relative; background: #fff; overflow: hidden; }
+
+.hero-v2__desk {
+  position: relative;
+  max-width: 1672px;
+  margin: 0 auto;
+}
+.hero-v2__img { display: block; width: 100%; height: auto; }
+
+.hero-v2__hotspot {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  border-radius: 14px;
+}
+.hero-v2__hotspot:hover { background: rgba(255,255,255,.12); }
+.hero-v2__hotspot:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Live text: hidden visually on desktop (the image shows it),
+   still read by screen readers and search engines. */
+.hero-v2__copy {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+/* Buttons in the hidden copy are removed on desktop so keyboard
+   users tab through the visible hotspots instead (no duplicates). */
+.hero-v2__copy .hero-v2__actions { display: none; }
+.hero-v2__art { display: none; }
+
+/* ---------- Phones ---------- */
+@media (max-width: 760px) {
+  .hero-v2__desk { display: none; }
+
+  .hero-v2 {
+    background: linear-gradient(180deg, var(--hero-tint, #eef8fb) 0%, #fff 100%);
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+  .theme-curriculum .hero-v2 { --hero-tint: #fdf4e3; }
+  .theme-educators  .hero-v2 { --hero-tint: #fdeeea; }
+  .theme-schools    .hero-v2 { --hero-tint: #eaf7f0; }
+
+  .hero-v2__copy {
+    position: static !important;
+    width: auto; height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  .hero-v2__kicker {
+    margin: 0 0 .6rem;
+    font: 600 .8rem/1.4 Poppins, system-ui, sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hero-v2 h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    color: #0b1a45;
+  }
+  .hero-v2__sub {
+    margin: .9rem 0 0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #1d2f6f;
+  }
+  .hero-v2__copy .hero-v2__actions {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+    margin-top: 1.25rem;
+  }
+  .hero-v2__actions .btn {
+    justify-content: center;
+    min-height: 48px;
+    border-radius: 12px;
+  }
+  .hero-v2 .hero-v2__actions a.btn.btn--primary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
+  }
+  .hero-v2 .hero-v2__actions a.btn.btn--outline {
+    background: #fff !important;
+    border: 2px solid var(--accent) !important;
+    color: var(--accent) !important;
+  }
+  .hero-v2__micro {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+  }
+  .hero-v2__micro li {
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgba(11,26,69,.12);
+    font-size: .85rem;
+    color: #1d2f6f;
+  }
+  .hero-v2__art {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 18px;
+  }
+}
+
+/* Contact page: real headshot on the booking card */
+.fra-contact-name img { object-position: center 20%; }
+
+/* Contact form heading was navy on navy (invisible) */
+.fra-contact-form h2 { color: #fff; }
+
+/* Phones: stop the off-canvas menu and contact form from causing
+   sideways scrolling */
+@media (max-width: 900px) {
+  html, body { overflow-x: clip; }
+  .fra-contact-shell { grid-template-columns: minmax(0, 1fr); padding: 0 16px; }
+  .fra-contact-form, .fra-contact-side { min-width: 0; }
+}
+@media (max-width: 640px) {
+  .fra-contact-form { padding: 22px 18px; }
+  .fra-contact-form .form__row { grid-template-columns: minmax(0, 1fr); }
+  .fra-contact-form .field input,
+  .fra-contact-form .field select,
+  .fra-contact-form .field textarea { width: 100%; max-width: 100%; box-sizing: border-box; }
+}
+@media (max-width: 560px) {
+  .grid--4 { grid-template-columns: minmax(0, 1fr); }
+}
