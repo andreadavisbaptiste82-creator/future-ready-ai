@@ -66,3 +66,33 @@
   .fra-hero h1{font-size:clamp(2.55rem,14vw,3.8rem)}
   .fra-hero__micro{gap:10px}
 }
+
+
+/* ==========================================================
+   EXACT APPROVED IMAGE CROP FIX — 2026-09-26
+   The locked source image includes a narrow strip of homepage copy
+   on its far-left edge. Crop that strip in CSS only — no regeneration,
+   retouching, or face changes.
+   ========================================================== */
+.fra-hero__visual{
+  overflow:hidden!important;
+}
+.fra-hero__visual img{
+  width:112.1%!important;
+  max-width:none!important;
+  transform:translateX(-10.8%)!important;
+  transform-origin:left center!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  filter:none!important;
+}
+
+/* Keep the same exact image while allowing each page's approved
+   background/accent color to remain visible around the composition. */
+.fra-theme-home .fra-hero__visual{background:#e9f8fd}
+.fra-theme-curriculum .fra-hero__visual{background:#fff5d8}
+.fra-theme-educators .fra-hero__visual{background:#fff0ec}
+.fra-theme-schools .fra-hero__visual{background:#e9f8f2}
+.fra-theme-resources .fra-hero__visual{background:#eef7ff}
+.fra-theme-about .fra-hero__visual{background:#f4fbf8}
+.fra-theme-contact .fra-hero__visual{background:#eef9fd}

@@ -29,5 +29,5 @@
     container.replaceWith(wrap);wrap.append(left,side);
     form.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();if(!form.checkValidity()){form.reportValidity();return;}const d=new FormData(form);const subject='Future Ready AI Program Inquiry — '+(d.get('organization')||d.get('name')||'New Inquiry');const body=[`Name: ${d.get('name')||''}`,`Organization: ${d.get('organization')||''}`,`Role: ${d.get('role')||''}`,`Email: ${d.get('email')||''}`,`Phone: ${d.get('phone')||''}`,`Inquiry Type: ${d.get('inquiry_type')||''}`,`Grade Levels: ${d.get('grades')||''}`,`Learners/Educators: ${d.get('size')||''}`,'','Message:',d.get('message')||''].join('\n');location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;},true);
   }
-  document.addEventListener('DOMContentLoaded',()=>{initHero();initContact();});
+  document.addEventListener('DOMContentLoaded',()=>{initContact();});
 })();
