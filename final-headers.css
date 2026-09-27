@@ -440,3 +440,30 @@
   .fra-hero__visual{border-radius:18px}
   .fra-hero__visual::after{width:9%}
 }
+
+
+/* FINAL LOCKED 7 HEADER IMAGES — 2026-09-27 */
+.approved-hero--locked7{
+  padding:0!important;
+  margin:0!important;
+  background:#fff!important;
+  overflow:hidden!important;
+}
+.approved-hero--locked7 .approved-hero__wrap{
+  position:relative!important;
+  width:min(1508px,100%)!important;
+  max-width:none!important;
+  margin:0 auto!important;
+}
+.approved-hero--locked7 .approved-hero__image{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+}
+@media(max-width:760px){
+  .approved-hero--locked7{padding:0!important}
+  .approved-hero--locked7 .approved-hero__wrap{width:100%!important}
+}
