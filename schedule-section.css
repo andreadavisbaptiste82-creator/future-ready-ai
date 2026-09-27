@@ -1,0 +1,16 @@
+/* Scheduling section — scoped to .sched so nothing else on the site changes. */
+.sched{--s-bg:#F7F4EC;--s-card:#FFFFFF;--s-ink:#13213C;--s-muted:#4B5A73;--s-accent:#2F8080;--s-btn:#13213C;--s-btntext:#FFFFFF;--s-border:#E3DCCB;
+  background:var(--s-bg);color:var(--s-ink);padding:clamp(56px,7vw,96px) 0;font-family:'Poppins', Arial, sans-serif}
+.sched *{box-sizing:border-box}
+.sched-wrap{width:min(1180px,100% - 40px);margin-inline:auto;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.sched h2{margin:0 0 12px;font-size:clamp(28px,3vw,40px);line-height:1.15;color:var(--s-ink)}
+.sched-lede{margin:0 0 16px;color:var(--s-muted);font-size:clamp(16px,1.3vw,18px);line-height:1.6}
+.sched-points{margin:0 0 22px;padding-left:1.2em;color:var(--s-muted);line-height:1.7}
+.sched-points li::marker{color:var(--s-accent)}
+.sched-btn{display:inline-block;background:var(--s-btn);color:var(--s-btntext);font-weight:700;text-decoration:none;padding:13px 22px;border-radius:10px}
+.sched-btn:hover{filter:brightness(1.1);color:var(--s-btntext)}
+.sched-btn:focus-visible{outline:3px solid var(--s-accent);outline-offset:3px}
+.sched-small{margin:12px 0 0;font-size:14px;color:var(--s-muted)}
+.sched-embed{background:var(--s-card);border:1px solid var(--s-border);border-radius:14px;overflow:hidden}
+.sched-embed iframe{display:block;width:100%;height:640px;border:0;background:#fff}
+@media (max-width:900px){.sched-wrap{grid-template-columns:1fr}.sched-embed iframe{height:600px}}
