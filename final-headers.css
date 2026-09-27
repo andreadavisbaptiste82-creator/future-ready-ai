@@ -253,3 +253,190 @@
   .fra-hero__btn{width:100%;box-sizing:border-box}
   .fra-hero__micro{gap:8px 12px}
 }
+
+
+/* HEADER QUALITY REBUILD — 2026-09-27 */
+/* This layer intentionally uses the original approved source art only once.
+   It removes the prior 112% raster enlargement/crop that softened the hero
+   and masks the source-art edge without resampling the image. */
+.fra-hero{
+  --fra-surface:#eef9fb;
+  --fra-surface-2:#ffffff;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid rgba(11,36,80,.10);
+  isolation:isolate;
+}
+.fra-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(255,255,255,.95),transparent 30%),
+    radial-gradient(circle at 12% 88%,rgba(255,255,255,.68),transparent 28%),
+    linear-gradient(110deg,var(--fra-surface-2) 0 38%,var(--fra-surface) 100%);
+}
+.fra-hero::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  right:-170px;
+  top:-170px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--fra-accent) 12%,transparent);
+  z-index:-1;
+}
+.fra-hero__inner{
+  max-width:1280px!important;
+  min-height:520px;
+  margin:0 auto!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(420px,.92fr)!important;
+  gap:clamp(28px,4vw,64px)!important;
+  align-items:center!important;
+  padding:clamp(48px,6vw,82px) 32px 42px!important;
+}
+.fra-hero__copy{
+  max-width:650px!important;
+}
+.fra-hero__eyebrow{
+  display:inline-flex!important;
+  align-items:center;
+  margin:0 0 16px!important;
+  padding:7px 12px;
+  border-radius:999px;
+  background:color-mix(in srgb,var(--fra-accent) 10%,#fff);
+  border:1px solid color-mix(in srgb,var(--fra-accent) 26%,#fff);
+  color:var(--fra-accent)!important;
+  font:700 .78rem/1.25 Poppins,Arial,sans-serif!important;
+  letter-spacing:.09em!important;
+}
+.fra-hero h1{
+  max-width:640px;
+  margin:0!important;
+  color:var(--fra-navy)!important;
+  font-family:Poppins,Arial,sans-serif!important;
+  font-size:clamp(2.75rem,4.6vw,4.75rem)!important;
+  font-weight:700!important;
+  line-height:1.02!important;
+  letter-spacing:-.04em!important;
+  text-wrap:balance;
+}
+.fra-hero__sub{
+  max-width:600px!important;
+  margin:20px 0 0!important;
+  color:#30465e!important;
+  font-size:clamp(1rem,1.15vw,1.18rem)!important;
+  line-height:1.62!important;
+}
+.fra-hero__actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:12px!important;
+  margin-top:28px!important;
+}
+.fra-hero__btn{
+  min-height:48px!important;
+  border-radius:12px!important;
+  padding:13px 21px!important;
+  font:700 .93rem/1 Poppins,Arial,sans-serif!important;
+  box-shadow:none!important;
+}
+.fra-hero__btn--solid{
+  background:var(--fra-accent)!important;
+  border-color:var(--fra-accent)!important;
+  color:#fff!important;
+}
+.fra-hero__btn--outline{
+  background:#fff!important;
+  border-color:color-mix(in srgb,var(--fra-accent) 55%,#fff)!important;
+  color:var(--fra-accent)!important;
+}
+.fra-hero__micro{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:10px 18px!important;
+  margin:28px 0 0!important;
+  padding:18px 0 0!important;
+  border-top:1px solid rgba(11,36,80,.12)!important;
+}
+.fra-hero__micro span{
+  color:#27415e!important;
+  font-size:.8rem!important;
+  font-weight:700!important;
+}
+.fra-hero__visual{
+  --fra-art-mask:var(--fra-surface);
+  position:relative!important;
+  min-height:0!important;
+  align-self:center;
+  display:flex!important;
+  align-items:flex-end!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  border:1px solid rgba(11,36,80,.09);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 70% 20%,rgba(255,255,255,.95),transparent 30%),
+    linear-gradient(145deg,#fff,var(--fra-surface));
+  box-shadow:0 24px 60px rgba(11,36,80,.12);
+}
+.fra-hero__visual::after{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:11%;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(90deg,var(--fra-art-mask) 0 58%,transparent 100%);
+}
+.fra-hero__visual img{
+  position:relative!important;
+  z-index:1!important;
+  display:block!important;
+  width:100%!important;
+  max-width:720px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto!important;
+}
+.fra-theme-home{--fra-accent:#238C92;--fra-surface:#dff4f4;--fra-surface-2:#fbfdfd!important;background:none!important}
+.fra-theme-about{--fra-accent:#2b7b75;--fra-surface:#e6f3ed;--fra-surface-2:#fffdf7!important;background:none!important}
+.fra-theme-curriculum{--fra-accent:#c8871c;--fra-surface:#fff0c9;--fra-surface-2:#fffdf8!important;background:none!important}
+.fra-theme-educators{--fra-accent:#e15e51;--fra-surface:#ffe6e1;--fra-surface-2:#fffafa!important;background:none!important}
+.fra-theme-schools{--fra-accent:#278669;--fra-surface:#e2f2e9;--fra-surface-2:#fbfffd!important;background:none!important}
+.fra-theme-resources{--fra-accent:#337e9b;--fra-surface:#e4f1f7;--fra-surface-2:#fbfdff!important;background:none!important}
+.fra-theme-contact{--fra-accent:#238C92;--fra-surface:#e2f3f5;--fra-surface-2:#fffdf8!important;background:none!important}
+.fra-theme-home .fra-hero__visual,
+.fra-theme-about .fra-hero__visual,
+.fra-theme-curriculum .fra-hero__visual,
+.fra-theme-educators .fra-hero__visual,
+.fra-theme-schools .fra-hero__visual,
+.fra-theme-resources .fra-hero__visual,
+.fra-theme-contact .fra-hero__visual{
+  background:
+    radial-gradient(circle at 72% 18%,rgba(255,255,255,.96),transparent 30%),
+    linear-gradient(145deg,#fff,var(--fra-surface))!important;
+}
+@media(max-width:980px){
+  .fra-hero__inner{
+    grid-template-columns:1fr!important;
+    min-height:0!important;
+    padding:44px 24px 28px!important;
+  }
+  .fra-hero__copy{max-width:760px!important}
+  .fra-hero__visual{max-width:760px;width:100%;margin:6px auto 0}
+}
+@media(max-width:620px){
+  .fra-hero__inner{padding:34px 18px 22px!important}
+  .fra-hero h1{font-size:clamp(2.35rem,12vw,3.25rem)!important}
+  .fra-hero__actions{display:grid!important;grid-template-columns:1fr!important}
+  .fra-hero__btn{width:100%!important}
+  .fra-hero__visual{border-radius:18px}
+  .fra-hero__visual::after{width:9%}
+}
