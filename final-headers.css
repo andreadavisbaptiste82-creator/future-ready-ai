@@ -1,0 +1,68 @@
+/* Future Ready AI — final locked header system
+   Uses ONE approved image on every hero to eliminate face drift. */
+:root{
+  --fra-navy:#0b2450;
+  --fra-teal:#0994a8;
+  --fra-gold:#d79b24;
+  --fra-coral:#f25d5d;
+  --fra-ink:#10233d;
+  --fra-muted:#55697a;
+}
+.fra-hero{overflow:hidden;border-bottom:1px solid rgba(11,36,80,.08)}
+.fra-hero__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(440px,1.05fr);align-items:center;gap:26px;padding:42px 28px 28px}
+.fra-hero__copy{position:relative;z-index:2;max-width:670px}
+.fra-hero__eyebrow{margin:0 0 12px;font:700 .82rem/1.4 Poppins,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.fra-hero h1{margin:0;color:var(--fra-navy);font-family:Georgia,'Times New Roman',serif;font-size:clamp(3rem,5.1vw,5.35rem);line-height:.96;letter-spacing:-.04em}
+.fra-hero__sub{max-width:620px;margin:18px 0 0;color:var(--fra-ink);font-size:clamp(1rem,1.5vw,1.25rem);line-height:1.5}
+.fra-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.fra-hero__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:12px;text-decoration:none;font:700 .95rem/1 Poppins,Arial,sans-serif;border:2px solid currentColor}
+.fra-hero__btn--solid{color:#fff;background:var(--fra-accent);border-color:var(--fra-accent)}
+.fra-hero__btn--outline{color:var(--fra-accent);background:rgba(255,255,255,.76)}
+.fra-hero__micro{display:flex;flex-wrap:wrap;gap:18px;margin:28px 0 0;padding:20px 0 0;border-top:1px solid rgba(11,36,80,.12)}
+.fra-hero__micro span{display:inline-flex;gap:8px;align-items:center;color:var(--fra-navy);font-weight:700;font-size:.82rem}
+.fra-hero__micro span::before{content:'✦';color:var(--fra-accent)}
+.fra-hero__visual{position:relative;min-height:485px;display:flex;align-items:flex-end;justify-content:center}
+.fra-hero__visual img{display:block;width:100%;max-width:720px;height:auto;object-fit:contain;object-position:center bottom;filter:none!important;transform:none!important}
+
+.fra-theme-home{--fra-accent:var(--fra-teal);background:linear-gradient(90deg,#f8feff 0 42%,#e9f8fd 74%,#dff3fb 100%)}
+.fra-theme-curriculum{--fra-accent:var(--fra-gold);background:linear-gradient(90deg,#fffdf8 0 42%,#fff5d8 74%,#fce8ae 100%)}
+.fra-theme-educators{--fra-accent:var(--fra-coral);background:linear-gradient(90deg,#fffafa 0 42%,#fff0ec 74%,#ffdcd5 100%)}
+.fra-theme-schools{--fra-accent:#0a9b8f;background:linear-gradient(90deg,#fbfffd 0 42%,#e9f8f2 74%,#d8f1e5 100%)}
+.fra-theme-resources{--fra-accent:#168ca7;background:linear-gradient(90deg,#fbfdff 0 42%,#eef7ff 74%,#e1f0ff 100%)}
+.fra-theme-about{--fra-accent:#178e99;background:linear-gradient(90deg,#fffdf8 0 42%,#f4fbf8 74%,#e8f5f1 100%)}
+.fra-theme-contact{--fra-accent:#0b98ad;background:linear-gradient(90deg,#fffdf8 0 42%,#eef9fd 72%,#e2f3f8 100%)}
+.fra-theme-home .fra-hero__eyebrow,.fra-theme-resources .fra-hero__eyebrow,.fra-theme-about .fra-hero__eyebrow,.fra-theme-contact .fra-hero__eyebrow{color:#087f90}
+.fra-theme-curriculum .fra-hero__eyebrow{color:#aa7112}
+.fra-theme-educators .fra-hero__eyebrow{color:#d84848}
+.fra-theme-schools .fra-hero__eyebrow{color:#087f78}
+
+.fra-contact-shell{max-width:1180px;margin:42px auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr);gap:20px;align-items:start}
+.fra-contact-form{background:linear-gradient(155deg,#0b3152,#071f36);color:#fff;padding:28px;border-radius:18px;box-shadow:0 16px 42px rgba(5,31,52,.12)}
+.fra-contact-form h2,.fra-contact-card h2{margin:.2rem 0 .55rem;font-family:Georgia,'Times New Roman',serif}
+.fra-contact-form p{color:#cfdae0}
+.fra-contact-form .form{margin:0}
+.fra-contact-form .field label,.fra-contact-form .field-checkbox label{color:#fff}
+.fra-contact-form .field input,.fra-contact-form .field select,.fra-contact-form .field textarea{background:#fff;color:#14293b}
+.fra-contact-form .btn{background:#12a6b6!important;color:#fff!important}
+.fra-contact-side{display:flex;flex-direction:column;gap:16px}
+.fra-contact-card{background:#fff8e7;border:1px solid #ead8ad;padding:24px;border-radius:18px}
+.fra-contact-card--blue{background:#eef9fd;border-color:#cce9f2}
+.fra-contact-card p{color:#526673}
+.fra-contact-card a{word-break:break-word}
+.fra-calendly-btn{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box;margin-top:16px;padding:13px 16px;border-radius:11px;background:#0799ab;color:#fff!important;text-decoration:none;font-weight:800}
+.fra-contact-name{display:flex;align-items:center;gap:12px;margin:16px 0;padding:12px;background:#fff;border:1px solid #ead8ad;border-radius:12px}
+.fra-contact-name img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:58% 18%}
+.fra-contact-name strong{display:block;color:var(--fra-navy)}
+.fra-contact-name span{display:block;color:#657883;font-size:.82rem;margin-top:2px}
+
+@media(max-width:900px){
+  .fra-hero__inner{grid-template-columns:1fr;padding-top:34px}
+  .fra-hero__visual{min-height:0}
+  .fra-hero__visual img{max-width:760px}
+  .fra-contact-shell{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .fra-hero__inner{padding:30px 18px 20px}
+  .fra-hero h1{font-size:clamp(2.55rem,14vw,3.8rem)}
+  .fra-hero__micro{gap:10px}
+}
