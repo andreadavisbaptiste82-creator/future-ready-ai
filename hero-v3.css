@@ -256,3 +256,60 @@ video::cue { background: rgba(11, 26, 69, .82); color: #fff; font-family: Inter,
 .hero-v3--compact .hero-v3__copy { max-width: 640px; margin-bottom: 0; }
 .hero-v3--compact h1 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
 @media (max-width: 900px) { .hero-v3__photo--wide img { width: 100%; margin-left: 0; } }
+
+/* =========================================================
+   Visual polish (site-wide)
+   ========================================================= */
+
+/* One heading style: the header's display serif for all main headings */
+main :is(h1, h2),
+main :is(.section, section) h3 {
+  font-family: "DM Serif Display", Georgia, "Times New Roman", serif !important;
+  font-weight: 400 !important;
+  font-synthesis: none;
+  letter-spacing: -.01em;
+}
+main h2 { line-height: 1.12; }
+main section h3 { line-height: 1.22; }
+/* keep small UI labels and step titles in the sans */
+main :is(.eyebrow, .btn, button, .accordion-trigger, .pathway-line__item h4, .step h4) { font-family: Poppins, system-ui, sans-serif; }
+
+/* One card style */
+main :is(.card, .band-nav__card, .standards-grid li, .dce-strip > div, .privacy-box) {
+  border-radius: 18px;
+  border: 1px solid rgba(11, 26, 69, .09);
+  box-shadow: 0 12px 28px -24px rgba(11, 26, 69, .45);
+}
+main .band-nav__card { border-top: 1px solid rgba(11, 26, 69, .09); }
+main .standards-grid li, main .privacy-box { border-left: 1px solid rgba(11, 26, 69, .09); }
+
+/* Even card rows (Resources library and other card grids) */
+main .grid { align-items: stretch; }
+main .grid > .card { display: flex; flex-direction: column; height: 100%; }
+main .grid > .card > :last-child { margin-top: auto; }
+
+/* Credential highlights: one calm style instead of mixed peach/yellow */
+main .founder__credentials li {
+  background: #fff !important;
+  border: 1px solid rgba(11, 26, 69, .12);
+  color: #1d2f6f;
+  font-weight: 500;
+}
+
+/* Tighter rhythm on the longest pages */
+.theme-schools main .section,
+.theme-resources main .section { padding-block: clamp(2.5rem, 4.5vw, 4rem); }
+
+/* For Schools: pilot steps inside the implementation pathway */
+.pilot-sub { margin-top: clamp(2rem, 4vw, 3rem); text-align: center; }
+.pilot-sub h3 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); margin: 0 0 .35rem; }
+.pilot-sub > p { margin: 0 auto 1.25rem; color: #55697a; }
+
+/* Contact: no blank box while Calendly loads */
+.sched-embed { position: relative; background: #fcf6ea; border-radius: 18px; }
+.sched-embed::before {
+  content: "Loading the booking calendar…";
+  position: absolute; inset: 0; display: grid; place-items: center;
+  color: #55697a; font-size: .95rem; z-index: 0;
+}
+.sched-embed iframe { position: relative; z-index: 1; }
