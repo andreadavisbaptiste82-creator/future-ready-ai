@@ -620,3 +620,16 @@ details.career-card .career-card__careers { margin-top: .4rem !important; }
   .hero-v3--careers .hero-v3__photo { padding-top: 1.25rem; }
   .hero-v3--careers .career-group img { width: 100%; margin-left: 0; }
 }
+
+/* Career header v2: school on the left (not behind the card), larger buildings on the right,
+   card shifted right, group moved toward the right */
+@media (min-width: 901px) {
+  .theme-careers .hero-v3--careers {
+    background: url("assets/images/headers-v3/career-school.webp") left max(8px, calc(50% - 740px)) bottom 8px / auto 34% no-repeat,
+                url("assets/images/headers-v3/career-hero-bg.webp") right top / auto 90% no-repeat,
+                url("assets/images/headers-v3/career-felt.webp") center / 900px auto repeat, #f8ecd4;
+  }
+  .hero-v3--careers .hero-v3__inner { max-width: 1480px; padding-left: clamp(1.25rem, 21vw, 320px); grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(1rem, 2.5vw, 2rem); }
+  .hero-v3--careers .hero-v3__copy { max-width: 470px; }
+  .hero-v3--careers .career-group img { width: 100%; margin-left: 4%; }
+}
