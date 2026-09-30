@@ -633,3 +633,21 @@ details.career-card .career-card__careers { margin-top: .4rem !important; }
   .hero-v3--careers .hero-v3__copy { max-width: 470px; }
   .hero-v3--careers .career-group img { width: 100%; margin-left: 4%; }
 }
+
+/* ---------- Career Pathways header v3: approved banner image beside the card ---------- */
+.theme-careers .hero-v3--careers,
+.theme-careers .hero-v3.hero-v3--careers {
+  background: url("assets/images/headers-v3/career-felt.webp") center / 900px auto repeat, #f8ecd4 !important;
+}
+@media (min-width: 901px) {
+  .hero-v3--careers .hero-v3__inner { max-width: 1320px; padding-left: clamp(1.25rem, 4vw, 2.5rem); grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: center; }
+  .hero-v3--careers .hero-v3__copy { max-width: none; }
+}
+.career-banner-figure { margin: 0; align-self: center; padding-block: clamp(1.25rem, 3vw, 2.5rem); }
+.career-banner-figure img { display: block; width: 100%; height: auto; border: 6px solid #C9A24A; border-radius: 22px; box-shadow: 0 24px 48px -26px rgba(11,26,69,.5); }
+.career-banner-figure .career-labels { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; list-style: none; margin: .9rem 0 0; padding: 0; position: relative; z-index: 2; }
+.career-banner-figure .career-label { display: inline-block; padding: .45rem .8rem; border-radius: 999px; color: #fff; font: 700 .8rem/1.1 Poppins, system-ui, sans-serif; text-decoration: none; }
+.career-banner-figure .career-label--medical { background: #0e7c89; } .career-banner-figure .career-label--construction { background: #c9472f; }
+.career-banner-figure .career-label--technology { background: #0b1a45; } .career-banner-figure .career-label--drones { background: #0d7a7a; }
+.career-banner-figure .career-label--business { background: #8f6a14; } .career-banner-figure .career-label--education { background: #c2413b; }
+@media (max-width: 900px) { .career-banner-figure { padding-top: 0; } }
