@@ -541,3 +541,82 @@ main .pd-beyond h3 { font-size: 1.35rem; margin: 0 0 .4rem; }
 .jump-menu a:hover, .jump-menu a:focus-visible { background: var(--accent); color: #fff; border-color: var(--accent); }
 .theme-careers main section[id] { scroll-margin-top: 110px; }
 @media (max-width: 560px) { .jump-menu ul { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .3rem; max-width: 100%; } .jump-menu a { white-space: nowrap; } }
+
+/* Career Pathways header: cutout sits on the header's bottom edge (like other pages) */
+.theme-careers .hero-v3__photo--wide img { width: 112%; margin-left: -6%; }
+@media (max-width: 900px) { .theme-careers .hero-v3__photo--wide img { width: 100%; margin-left: 0; } }
+
+/* Collapsible cards */
+details.is-collapsible > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+details.is-collapsible > summary::-webkit-details-marker { display: none; }
+details.is-collapsible > summary h3 { margin: 0 !important; }
+details.is-collapsible > summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+details.is-collapsible .toggle { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: #fcf6ea; border: 1px solid color-mix(in srgb, var(--accent) 35%, #fff); position: relative; }
+details.is-collapsible .toggle::before, details.is-collapsible .toggle::after { content: ""; position: absolute; left: 50%; top: 50%; width: .8rem; height: 2px; background: var(--accent); transform: translate(-50%, -50%); }
+details.is-collapsible .toggle::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .2s ease; }
+details.is-collapsible[open] .toggle::after { transform: translate(-50%, -50%) rotate(0deg); }
+details.is-collapsible .collapse-body { margin-top: .8rem; }
+.career-grid, .connection-grid { align-items: start; }
+details.career-card { display: block; }
+details.career-card .career-card__careers { margin-top: .4rem !important; }
+.collapse-hint { font-size: .95rem; color: #55697a; }
+/* Career Pathways header: give the ambassador group more room, like the Contact page photo */
+.theme-careers .hero-v3__inner { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+.theme-careers .hero-v3__photo--wide img { width: 116%; margin-left: -8%; }
+@media (max-width: 900px) { .theme-careers .hero-v3__inner { grid-template-columns: minmax(0, 1fr); } .theme-careers .hero-v3__photo--wide img { width: 100%; margin-left: 0; } }
+
+/* Career titles as real, readable text on phones and tablets (the badges in the image get too small there) */
+.career-labels { display: none; }
+@media (max-width: 900px) {
+  .career-labels { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; list-style: none; margin: .6rem 0 1rem; padding: 0; }
+  .career-label { display: inline-block; padding: .5rem .85rem; border-radius: 999px; color: #fff; font: 700 .85rem/1.1 Poppins, system-ui, sans-serif; text-decoration: none; }
+  .career-label--medical { background: #0e7c89; } .career-label--construction { background: #c9472f; }
+  .career-label--technology { background: #0b1a45; } .career-label--drones { background: #0d7a7a; }
+  .career-label--business { background: #8f6a14; } .career-label--education { background: #c2413b; }
+}
+.career-labels { position: relative; z-index: 2; }
+
+/* Career Pathways header: title, symbols, ambassadors and badges cut out and laid flat on felt */
+.career-header-art::before { display: none; }
+.theme-careers .career-header-art img { width: 110%; margin-left: -5%; -webkit-mask-image: none !important; mask-image: none !important; filter: drop-shadow(0 10px 16px rgba(11,26,69,.14)); }
+@media (max-width: 900px) { .theme-careers .career-header-art img { width: 100%; margin-left: 0; } }
+.theme-careers .hero-v3 { --hero-bg: url("assets/images/headers-v3/bg-careers.webp"); --hero-base: #f7e5cb; }
+
+/* ---------- Career Pathways: full-width felt banner header ---------- */
+.career-banner { background: url("assets/images/headers-v3/career-felt.webp") center / 900px auto repeat, #f8ecd4; }
+.career-banner__art { max-width: 1800px; margin: 0 auto; }
+.career-banner__art img { display: block; width: 100%; height: auto; }
+.career-banner__band { background: rgba(255,255,255,.72); border-top: 1px solid rgba(11,26,69,.08); border-bottom: 1px solid rgba(11,26,69,.08); }
+.career-banner__band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.1rem; }
+.career-banner__text .hero-v3__kicker { margin: 0 0 .25rem; }
+.career-banner__sub { margin: 0; font: 600 clamp(1.05rem, 1.6vw, 1.3rem)/1.4 Poppins, system-ui, sans-serif; color: #0b1a45; }
+.career-banner__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.career-banner__actions .btn { border-radius: 999px; }
+.theme-careers .career-banner__actions a.btn.btn--primary { background-color: var(--accent) !important; border-color: var(--accent) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.theme-careers .career-banner__actions a.btn.btn--outline { background: #fff !important; border: 2px solid var(--accent) !important; color: var(--accent) !important; -webkit-text-fill-color: var(--accent) !important; }
+.career-banner .career-labels { margin: .6rem 1rem 1rem; }
+@media (max-width: 760px) { .career-banner__actions { width: 100%; flex-direction: column; } .career-banner__actions .btn { justify-content: center; } }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Banner edges melt into the felt on very wide screens (edges are plain felt, nothing important there) */
+.career-banner__art img {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+}
+/* With Career Pathways in the menu there's no room for the extra header button on desktop; it stays in the phone menu */
+@media (min-width: 901px) { .nav-links li:has(> .btn--sm) { display: none; } }
+
+/* ---------- Career Pathways header: same structure as the other felt headers ---------- */
+.theme-careers .hero-v3--careers {
+  background: url("assets/images/headers-v3/career-hero-bg.webp") right top / auto 100% no-repeat,
+              url("assets/images/headers-v3/career-felt.webp") center / 900px auto repeat, #f8ecd4;
+}
+.hero-v3--careers .hero-v3__inner { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
+.hero-v3--careers .hero-v3__photo { padding-top: clamp(7.5rem, 13vw, 11.5rem); }
+.hero-v3--careers .career-group img { width: 108%; margin-left: -4%; filter: drop-shadow(0 12px 14px rgba(60,40,10,.18)); -webkit-mask-image: none; mask-image: none; }
+.hero-v3--careers .career-group::before { display: none; }
+@media (max-width: 900px) {
+  .theme-careers .hero-v3--careers { background: url("assets/images/headers-v3/career-felt.webp") center / 700px auto repeat, #f8ecd4; }
+  .hero-v3--careers .hero-v3__inner { grid-template-columns: minmax(0, 1fr); }
+  .hero-v3--careers .hero-v3__photo { padding-top: 1.25rem; }
+  .hero-v3--careers .career-group img { width: 100%; margin-left: 0; }
+}
