@@ -651,3 +651,24 @@ details.career-card .career-card__careers { margin-top: .4rem !important; }
 .career-banner-figure .career-label--technology { background: #0b1a45; } .career-banner-figure .career-label--drones { background: #0d7a7a; }
 .career-banner-figure .career-label--business { background: #8f6a14; } .career-banner-figure .career-label--education { background: #c2413b; }
 @media (max-width: 900px) { .career-banner-figure { padding-top: 0; } }
+/* Career Pathways header v3b: oversized stitched buildings behind the framed picture */
+.theme-careers .hero-v3--careers,
+.theme-careers .hero-v3.hero-v3--careers {
+  background: url("assets/images/headers-v3/career-hero-bg-v3.webp") center top / cover no-repeat, #f8ecd4 !important;
+}
+@media (max-width: 900px) {
+  .theme-careers .hero-v3--careers, .theme-careers .hero-v3.hero-v3--careers { background-position: 70% top !important; }
+}
+
+/* Career Pathways messaging alignment */
+.philosophy-line { margin: 1.25rem 0 .25rem; padding: .85rem 1.1rem; border-left: 4px solid #c9a24a; background: #fff; border-radius: 10px; font: 700 clamp(1.05rem, 1.6vw, 1.25rem)/1.4 Poppins, system-ui, sans-serif; color: #0b1a45; }
+.pathways-layer { max-width: 760px; margin-left: auto; margin-right: auto; }
+.habit-box { margin-top: 1rem; background: #fff; border: 1px solid rgba(11,26,69,.09); border-radius: 16px; padding: 1rem 1.15rem; }
+.habit-box__lead { margin: 0 0 .35rem; font-size: .95rem; color: #55697a; }
+.habit-box__framework { margin: 0 0 .6rem; font: 700 1.05rem/1.35 Poppins, system-ui, sans-serif; color: #0e7c89; }
+.habit-steps { margin: 0; display: grid; gap: .45rem; }
+.habit-steps dt { font-weight: 700; color: #0b1a45; display: inline; }
+.habit-steps dt::after { content: " — "; color: #55697a; font-weight: 400; }
+.habit-steps dd { display: inline; margin: 0; color: #1d2f6f; }
+.habit-box__hs { margin: .75rem 0 0; font-size: .9rem; color: #55697a; border-top: 1px solid rgba(11,26,69,.08); padding-top: .6rem; }
+.band-career__eq { font-size: .88rem; color: #55697a; font-style: italic; }
