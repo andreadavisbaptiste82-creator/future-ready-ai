@@ -672,3 +672,15 @@ details.career-card .career-card__careers { margin-top: .4rem !important; }
 .habit-steps dd { display: inline; margin: 0; color: #1d2f6f; }
 .habit-box__hs { margin: .75rem 0 0; font-size: .9rem; color: #55697a; border-top: 1px solid rgba(11,26,69,.08); padding-top: .6rem; }
 .band-career__eq { font-size: .88rem; color: #55697a; font-style: italic; }
+
+/* Course structure (AI Explorers + AI Innovators) */
+.course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; margin-top: 1.5rem; }
+.course-card { background: #fff; border: 1px solid rgba(11,26,69,.09); border-radius: 18px; padding: 1.4rem 1.5rem; box-shadow: 0 12px 28px -24px rgba(11,26,69,.45); }
+main .course-card h3 { font-size: 1.35rem; margin: 0 0 .7rem; }
+.course-weeks { list-style: none; margin: 0 0 .9rem; padding: 0; display: grid; gap: .35rem; }
+.course-weeks li { display: grid; grid-template-columns: 4.6rem 1fr; gap: .5rem; align-items: baseline; font-size: .96rem; color: #1d2f6f; padding: .35rem .6rem; background: #fcf6ea; border-radius: 8px; }
+.course-weeks span { font: 700 .78rem/1.2 Poppins, system-ui, sans-serif; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+.course-note { font-size: .93rem; line-height: 1.55; margin: 0 0 .55rem; }
+@media (max-width: 900px) { .course-grid { grid-template-columns: minmax(0, 1fr); } }
+/* The header picture already shows the six pathway labels on larger screens; keep the tappable labels for phones/tablets only */
+@media (min-width: 901px) { .career-banner-figure .career-labels { display: none; } }
