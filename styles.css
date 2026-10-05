@@ -3264,3 +3264,7 @@ button.btn--outline:active {
   }
 }
 /* === Future Ready AI Guide Video: END === */
+
+/* 2026-10-04: School Leaders' guide is a landscape (16:9) deck — show its cover full width */
+.home-closing__panel--resource { grid-template-columns:1fr; align-items:start; }
+.home-closing__panel--resource img { max-height:none; height:auto; aspect-ratio:16 / 9; object-fit:cover; box-shadow:0 8px 24px rgba(20,40,58,.12); }
