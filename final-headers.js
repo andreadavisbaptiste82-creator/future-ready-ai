@@ -27,6 +27,18 @@
     const left=document.createElement('div');left.className='fra-contact-form';left.innerHTML='<p class="eyebrow">Program Inquiry</p><h2>Send a Program Inquiry</h2><p>Tell us about your organization and how we can support your learners. We’ll follow up within 2–3 business days.</p>';left.appendChild(form);
     const side=document.createElement('aside');side.className='fra-contact-side';side.innerHTML=`<section class="fra-contact-card"><p class="eyebrow">Discovery Call</p><h2>Book a Discovery Call</h2><p>Schedule a 30-minute conversation to discuss your goals, ask questions, and explore how Future Ready AI can support your learners.</p><div class="fra-contact-name"><img src="assets/images/founder-andrea-davis-baptiste.jpg" alt="Andrea Davis-Baptiste"><div><strong>Andrea Davis-Baptiste</strong><span>Founder & Program Lead · 30 min · Google Meet or phone</span></div></div><a class="fra-calendly-btn" href="${CALENDLY}" target="_blank" rel="noopener noreferrer">Select a Date & Time →</a></section><section class="fra-contact-card fra-contact-card--blue"><p class="eyebrow">Direct Contact</p><h2>Future Ready AI</h2><p><a href="mailto:${EMAIL}">${EMAIL}</a></p><p><a href="${SITE}" target="_blank" rel="noopener noreferrer">maisonglamouretgrace.com ↗</a></p></section>`;
     container.replaceWith(wrap);wrap.append(left,side);
+    try{
+      var qs=new URLSearchParams(location.search);var inq=qs.get('inquiry');
+      if(inq){
+        var map={'ai-entrepreneurship':{type:'curriculum',grades:'9-12'},'school-review-kit-discoverers':{type:'school-pilot',grades:'3-5'},'school-review-kit-explorers':{type:'school-pilot',grades:'6-8'},'school-review-kit-innovators':{type:'school-pilot',grades:'9-12'}};
+        var hit=map[inq];
+        if(hit){
+          var typeSel=form.querySelector('#c-inquiry-type');var gradesInput=form.querySelector('#c-grades');
+          if(typeSel&&!typeSel.value)typeSel.value=hit.type;
+          if(gradesInput&&!gradesInput.value)gradesInput.value=hit.grades;
+        }
+      }
+    }catch(e){}
     form.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();if(!form.checkValidity()){form.reportValidity();return;}const d=new FormData(form);const subject='Future Ready AI Program Inquiry — '+(d.get('organization')||d.get('name')||'New Inquiry');const body=[`Name: ${d.get('name')||''}`,`Organization: ${d.get('organization')||''}`,`Role: ${d.get('role')||''}`,`Email: ${d.get('email')||''}`,`Phone: ${d.get('phone')||''}`,`Inquiry Type: ${d.get('inquiry_type')||''}`,`Grade Levels: ${d.get('grades')||''}`,`Learners/Educators: ${d.get('size')||''}`,'','Message:',d.get('message')||''].join('\n');location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;const m=form.querySelector('.form-message');if(m){m.setAttribute('data-visible','true');m.setAttribute('tabindex','-1');m.focus();}},true);
   }
   document.addEventListener('DOMContentLoaded',()=>{initContact();});
